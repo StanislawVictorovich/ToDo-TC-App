@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+  
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+  
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.4s;
+    
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+  
+ul li.Checked {
+  background: lightgray;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul li.Checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.Close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.Close:hover {
+  background-color: #f44336;
+  color: white;
+  transition: 0.4s;
+}
+
+.Header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.Header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 0;
+}
+  
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.addBtn:active {
+  background-color: dimgrey;
+}
+
+#NewPage {
+  right: 0;
+}
+
+#ForwardPage {
+  transform: rotate(90deg);
+  right: 46px;
+}
+
+#BackPage {
+  transform: rotate(90deg);
+  right: 86px;
+}
+
+.NavigationButtons {
+  position: absolute;
+  bottom: 0;
+  padding: 12px;
+}
+
+.NavigationButtons:hover {
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+  transition: 0.4s;  
+}
