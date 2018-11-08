@@ -20,8 +20,8 @@ export class ListElement {
     const text: Text = document.createTextNode(inputValue);
     liElement.appendChild(text);
 
-    inputValue === '' ? alert('You must write something before adding.') 
-                      : document.getElementById('WorkBlock').appendChild(liElement);
+    !inputValue ? alert('You must write something before adding.') 
+                      : document.getElementById('CurrentPage').appendChild(liElement);
 
     document.getElementById('Input').value = '';
 
@@ -35,8 +35,7 @@ export class ListElement {
     for (let i:number = 0; i < closeElements.length; i++) {
       closeElements[i].onclick = function () {
         const divElement = this.parentElement;
-        divElement.style.display = 'none';
-
+        divElement.style.display = 'none'
       }
     }
   }
