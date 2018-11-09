@@ -1,12 +1,23 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "target": "es5",
-    "module": "es6",
+    "noImplicitAny": false,
+    "outDir": "dist",
+    "rootDir": ".",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "moduleResolution": "node",
-    "sourceMap": true
+    "types": [
+      "jasmine"
+    ]
   },
+  "include": [
+    "app/**/*"
+  ],
   "exclude": [
     "node_modules",
-    "dist"
+    "!node_modules/@types"
   ]
 }

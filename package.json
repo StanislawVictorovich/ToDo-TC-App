@@ -1,47 +1,45 @@
 {
-  "name": "webpack-typescript-todo-app",
-  "version": "0.0.1",
-  "description": "multipaged todo app",
-  "main": "src/index.ts",
+  "name": "webpack_typescript_todo_app",
+  "version": "0.2.9",
+  "description": "Webpack + TypeScript",
+  "author": "Stanislaw Svirepov",
+  "license": "ISC",
   "scripts": {
     "start": "npm run server:dev",
-    "server": "npm run server:dev",
     "server:dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js --port 3000 --host 0.0.0.0 --hot --inline --progress --profile --watch --content-base dist/ --open",
     "server:prod": "cross-env NODE_ENV=production webpack-dashboard -- webpack-dev-server --config ./webpack.config.js --port 3000 --host 0.0.0.0 --hot --inline --progress --profile --watch --content-base dist/",
-    "build": "npm run build:dev",
+    "build": "webpack",
     "build:dev": "webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached",
     "build:prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js  --progress --profile --color --display-error-details --display-cached --bail",
-    "clean": "npm cache clear && rimraf -- dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/StanislawVictorovich/ToDo-TC-App.git"
-  },
-  "author": "Stanislaw",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/lodash": "^4.14.50",
-    "copy-webpack-plugin": "^4.0.1",
-    "cross-env": "^3.1.4",
-    "css-loader": "^0.26.1",
-    "ejs-loader": "^0.3.0",
-    "eslint": "^3.14.0",
-    "expose-loader": "^0.7.1",
-    "html-loader": "^0.4.4",
-    "html-webpack-plugin": "^2.26.0",
-    "rimraf": "^2.5.4",
-    "style-loader": "^0.13.1",
-    "ts-loader": "^2.0.0",
-    "tslint": "^4.3.1",
-    "tslint-loader": "^3.3.0",
-    "typescript": "^2.1.5",
-    "webpack": "^2.1.0-beta.22",
-    "webpack-dashboard": "^0.2.1",
-    "webpack-dev-server": "2.2.0"
+  "test": "karma start"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "@types/jasmine": "^2.5.47",
+    "@types/karma": "^0.13.35"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "bs-fullscreen-message": "^1.0.0",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "gulp-sass": "^3.1.0",
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-typescript": "^3.0.0",
+    "sass-loader": "^6.0.3",
+    "strip-ansi": "^3.0.0",
+    "style-loader": "^0.16.1",
+    "ts-loader": "^0.8.1",
+    "typescript": "^2.2.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.1"
   },
   "bugs": {
     "url": "https://github.com/StanislawVictorovich/ToDo-TC-App/issues"
