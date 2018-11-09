@@ -7,8 +7,8 @@ module.exports = {
     devtool: '#source-map',
 
     entry: [
-        './app/index.ts',
-        './app/css/style.css'
+        './src/index.ts',
+        './src/css/style.css'
     ],
 
     output: {

@@ -6,7 +6,8 @@ import { ListElement } from './js/listelements';
 import { Navigation } from './js/navigation';
 
 const loader = new Loader();
-getId('Date').innerHTML = new Date();
+const date = new Date();
+document.getElementById('Date').innerHTML = date.toString();
 const closeButton = new ButtonClose();
 const listElement = new ListElement();
 const navigationElement = new Navigation();

@@ -11,7 +11,7 @@
     "build": "webpack",
     "build:dev": "webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached",
     "build:prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js  --progress --profile --color --display-error-details --display-cached --bail",
-  "test": "karma start"
+    "test": "karma start"
   },
   "dependencies": {
     "@types/jasmine": "^2.5.47",
@@ -21,7 +21,7 @@
     "browser-sync": "^2.8.0",
     "bs-fullscreen-message": "^1.0.0",
     "css-loader": "^0.28.0",
-    "extract-text-webpack-plugin": "^2.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "gulp-sass": "^3.1.0",
     "jasmine": "^2.5.3",
     "jasmine-core": "^2.5.2",

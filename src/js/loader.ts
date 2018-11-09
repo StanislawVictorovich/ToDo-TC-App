@@ -1,9 +1,9 @@
 export class Loader {
-  private bodyElement: HTMLBodyElement;
+  private bodyElement: HTMLElement;
   private divOperationBlockElement: HTMLDivElement;
   private h4DateElement: HTMLHeadingElement;
   private inputElement: HTMLInputElement;
-  private spanAddBtnElement: HTMLButtonElement;
+  private spanAddBtnElement: HTMLElement;
   private divPagesElement: HTMLDivElement;
   private ulCurrentPageElement: HTMLUListElement;
   private divNavigationBlockElement: HTMLDivElement;

@@ -1,5 +1,5 @@
 export class ButtonClose {
-  private listElements: HTMLCollection;
+  private listElements: NodeListOf<Element>;
   private closeElements: HTMLCollection;
   constructor () {
     this.listElements = document.getElementsByTagName("LI");
@@ -19,10 +19,10 @@ export class ButtonClose {
   private buttonCloseClickInits = ():void => {
     const closeElements: HTMLCollection = document.getElementsByClassName('Close');
     for (let i:number = 0; i < closeElements.length; i++) {
-      closeElements[i].onclick = function () {
+      closeElements[i].addEventListener ('click', function () {
         const divElement = this.parentElement; 
         divElement.style.display = 'none';
-      }
+      });
     }
   }
 }

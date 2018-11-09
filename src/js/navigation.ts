@@ -1,14 +1,12 @@
-import { getId } from './constants'
-
 abstract class HtmlCollection {
   protected navigationBlock: HTMLElement;
   protected backwardButton: HTMLElement;
   protected forwardButton: HTMLElement;
   protected addNewPageButton: HTMLElement;
   protected body: HTMLBodyElement;
-  protected ulElements: HTMLCollection;  
+  protected ulElements: NodeListOf<Element>;  
   constructor () {
-    this.navigationBlock = getId('NavigationBlock');
+    this.navigationBlock = document.getElementById('NavigationBlock');
     this.body = document.getElementsByTagName('body')[0];
     this.ulElements = document.getElementsByTagName('UL');    
   }
@@ -30,8 +28,8 @@ export class Navigation extends HtmlCollection {
     this.currentPage = 0;
     this.indexOfLastPage = 0;
   }
-  private activateElements = (id: string, iconText: Text): HTMLDivElement => {
-    const element: HTMLDivElement = document.createElement('DIV');
+  private activateElements = (id: string, iconText: string): HTMLElement => {
+    const element: HTMLElement = document.createElement('DIV');
     element.className = 'NavigationButtons';
     element.id = id;
     const icon:Text = document.createTextNode(iconText);
@@ -40,21 +38,22 @@ export class Navigation extends HtmlCollection {
     return element;
   }
   private createNewPage = ():void => {
-    const page: HTMLUListElement = document.createElement('UL');
+    const page: HTMLElement = document.createElement('UL');
     page.className = 'WorkBlock';
     this.indexOfLastPage++;
     this.body.appendChild(page);
     this.swtichPager(this.ulElements[this.currentPage], this.ulElements[this.indexOfLastPage]);
-    page.addEventListener('click', function (element: MouseEvent) {
-      if (element.target.tagName === 'LI') {
-        element.target.classList.toggle('Checked');
+    page.addEventListener('click', function (event: MouseEvent) {
+      let element = event.target as HTMLElement;
+      if (element.tagName === 'LI') {
+        element.classList.toggle('Checked');
       }
     } ,false);
     this.currentPage = this.indexOfLastPage;
     this.backwardButton.style.display = 'block';
     this.forwardButton.style.display = 'none';
   }
-  private swtichPager = (currentElement: HTMLElement, nextElement: HTMLElement):void => {
+  private swtichPager = (currentElement, nextElement):void => {
     currentElement.id = '';
     currentElement.style.display = 'none';
     nextElement.id = 'CurrentPage';

@@ -5,7 +5,7 @@ body {
   
 * {
   box-sizing: border-box;
-  font-family: '-apple-system', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h4 {

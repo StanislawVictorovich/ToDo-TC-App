@@ -8,13 +8,10 @@
     "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "types": [
-      "jasmine"
-    ]
+    "moduleResolution": "node"
   },
   "include": [
-    "app/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",

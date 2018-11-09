@@ -1,1 +1,1 @@
-export const getId: HTMLElement = document.getElementById.bind(document);
+export const getId = document.getElementById.bind(document);
