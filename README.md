@@ -19,22 +19,19 @@ Then add the loader to your `webpack` config. For example:
 ```js
 // webpack.config.js
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /.js/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: `jshint-loader`,
-            options: {...options}
-          }
-        ]
-      }
-    ]
-  }
-}
+    devtool: '#source-map',
+
+    entry: [
+        './src/index.ts',
+        './src/css/style.css'
+    ],
+
+    output: {
+        path: __dirname,
+        publicPath: '/',
+        filename: 'dist/js/bundle.js'
+    },
+
 ```
 
 
@@ -42,8 +39,8 @@ And run `webpack` via your preferred method.
 
 ## Build Only
 ```
-npm run build:prod
+npm run build
 ```
 ## Requirements
 
-This module requires a minimum of Webpack v4.0.0.
+This module requires a minimum of Webpack v2.7.1.
