@@ -1,6 +1,6 @@
-rd <div align="center">
-  <a href="https://github.com/webpack/webpack">
-    <img width="100" height="100" src="https://webpack.js.org/assets/icon-square-big.svg">
+<div align="center">
+  <a href="https://github.com/StanislawVictorovich/ToDo-TC-App">
+    <img width="150" height="150" src="https://mbtskoudsalg.com/images/checklist-3d-png-4.png">
   </a>
 </div>
 
