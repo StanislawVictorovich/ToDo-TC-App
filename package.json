@@ -5,7 +5,7 @@
   "author": "Stanislaw Svirepov",
   "license": "ISC",
   "scripts": {
-    "start": "npm run server:dev",
+    "start": "webpack-dev-server --port 9000 --progress --colors --hot --content-base src",
     "server:dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js --port 3000 --host 0.0.0.0 --hot --inline --progress --profile --watch --content-base dist/ --open",
     "server:prod": "cross-env NODE_ENV=production webpack-dashboard -- webpack-dev-server --config ./webpack.config.js --port 3000 --host 0.0.0.0 --hot --inline --progress --profile --watch --content-base dist/",
     "build": "webpack",
@@ -39,7 +39,8 @@
     "ts-loader": "^0.8.1",
     "typescript": "^2.2.2",
     "webpack": "^2.2.1",
-    "webpack-dev-middleware": "^1.10.1"
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-dev-server": "^2.7.1"
   },
   "bugs": {
     "url": "https://github.com/StanislawVictorovich/ToDo-TC-App/issues"
