@@ -1,3 +1,5 @@
+import { getId } from './constants'
+
 abstract class HtmlCollection {
   protected navigationBlock: HTMLElement;
   protected backwardButton: HTMLElement;
@@ -6,7 +8,7 @@ abstract class HtmlCollection {
   protected body: HTMLBodyElement;
   protected ulElements: HTMLCollection;  
   constructor () {
-    this.navigationBlock = document.getElementById('NavigationBlock');
+    this.navigationBlock = getId('NavigationBlock');
     this.body = document.getElementsByTagName('body')[0];
     this.ulElements = document.getElementsByTagName('UL');    
   }

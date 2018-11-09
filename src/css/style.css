@@ -8,6 +8,10 @@ body {
   font-family: -apple-system, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+h4 {
+  margin: 5px;
+}
+
 ul {
   margin: 0;
   padding: 0;

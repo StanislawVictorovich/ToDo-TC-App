@@ -9,7 +9,7 @@ export class ButtonClose {
   }
   private buttonsCloseInit = ():void => {
     for (let i:number = 0; i < this.listElements.length; i++) {
-      const spanElement: HTMLElement = document.createElement("SPAN");
+      const spanElement: HTMLElement = document.createElement("span");
       const icon: Text = document.createTextNode('\u274C');
       spanElement.className = 'Close';
       spanElement.appendChild(icon);

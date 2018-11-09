@@ -1,7 +1,9 @@
+import { getId } from './constants'
+
 export class ListElement {
   private ulElement: HTMLUListElement;   
   constructor () {
-    this.ulElement = document.getElementById('CurrentPage');
+    this.ulElement = getId('CurrentPage');
     this.ulElement.addEventListener('click', function (element: MouseEvent) {
       if (element.target.tagName === 'LI') {
         element.target.classList.toggle('Checked');
@@ -16,14 +18,14 @@ export class ListElement {
   }
   public add = (): void => {
     const liElement: HTMLLIElement = document.createElement('li');
-    const inputValue: string = document.getElementById('Input').value;
+    const inputValue: string = getId('Input').value;
     const text: Text = document.createTextNode(inputValue);
     liElement.appendChild(text);
 
     !inputValue ? alert('You must write something before adding.') 
-                      : document.getElementById('CurrentPage').appendChild(liElement);
+                      : getId('CurrentPage').appendChild(liElement);
 
-    document.getElementById('Input').value = '';
+    getId('Input').value = '';
 
     const spanElement: HTMLElement = document.createElement('SPAN');
     const icon: Text = document.createTextNode('\u274C');
