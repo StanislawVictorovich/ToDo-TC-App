@@ -33,7 +33,7 @@ export class ListElement extends HtmlCollection {
     liElement.appendChild(spanElement);
     const closeElements: HTMLCollection = document.getElementsByClassName(CONST.BUTTON_DELETE_TASK_CLASS);
 
-    for (let element of closeElements) {
+    for (let element of <any>closeElements) {
       element.addEventListener ('click', function () {
         const divElement = this.parentElement;
         divElement.style.display = 'none'
