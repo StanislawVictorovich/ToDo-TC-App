@@ -25,7 +25,6 @@ ul li {
   background: #eee;
   font-size: 18px;
   transition: 0.4s;
-    
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -63,17 +62,18 @@ ul li.Checked::before {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 12px 16px 12px 16px;
+  padding: 11px 11px 11px 10px;
+  transition: 0.4s;
 }
 
 .Close:hover {
-  background-color: #f44336;
+  background-color: rgb(90, 46, 172);
   color: white;
   transition: 0.4s;
 }
 
 .Header {
-  background-color: #f44336;
+  background-color: #6f36f4;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -96,6 +96,9 @@ input {
 }
 
 .addBtn {
+  border: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
   padding: 10px;
   width: 25%;
   background: #d9d9d9;
@@ -109,11 +112,12 @@ input {
 }
   
 .addBtn:hover {
-  background-color: #bbb;
+  background-color: #555555;
+  color: white;
 }
 
 .addBtn:active {
-  background-color: dimgrey;
+  background-color: rgb(49, 48, 48);
 }
 
 #NewPage {
@@ -126,7 +130,7 @@ input {
 }
 
 #BackPage {
-  transform: rotate(90deg);
+  transform: rotate(270deg);
   right: 86px;
 }
 
@@ -134,11 +138,12 @@ input {
   position: absolute;
   bottom: 0;
   padding: 12px;
+  transition: 0.4s;  
 }
 
 .NavigationButtons:hover {
   cursor: pointer;
-  background-color: #f44336;
+  background-color: rgb(90, 46, 172);
   color: white;
   transition: 0.4s;  
 }

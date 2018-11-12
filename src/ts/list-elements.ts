@@ -1,6 +1,8 @@
-export class ListElement {
-  private ulElement: HTMLElement;   
+import { HtmlCollection } from './collection';
+
+export class ListElement extends HtmlCollection {
   constructor () {
+    super();
     this.ulElement = document.getElementById('CurrentPage');
     this.ulElement.addEventListener('click', function (event: MouseEvent) {
       let element = event.target as HTMLElement;
@@ -15,7 +17,7 @@ export class ListElement {
       addButton[i].addEventListener('click', this.add);
     }
   }
-  public add = (): void => {
+  public add(): void {
     const liElement: HTMLLIElement = document.createElement('li');
     const inputValue: string = (<HTMLInputElement>document.getElementById('Input')).value;
     const text: Text = document.createTextNode(inputValue);
