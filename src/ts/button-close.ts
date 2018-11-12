@@ -1,4 +1,5 @@
 import { HtmlCollection } from './collection';
+import * as CONST from './constants';
 
 export class ButtonClose extends HtmlCollection {
   constructor () {
@@ -7,18 +8,17 @@ export class ButtonClose extends HtmlCollection {
     this.buttonCloseClickInits();
   }
   private buttonsCloseInit():void {
-    for (let i:number = 0; i < this.listElements.length; i++) {
+    for (let element of this.listElements) {
       const spanElement: HTMLElement = document.createElement("span");
-      const icon: Text = document.createTextNode('\u274C');
-      spanElement.className = 'Close';
+      const icon: Text = document.createTextNode(CONST.BUTTON_DELETE_TASK_ICON);
+      spanElement.className = CONST.BUTTON_DELETE_TASK_CLASS;
       spanElement.appendChild(icon);
-      this.listElements[i].appendChild(spanElement);
+      element.appendChild(spanElement);
     }
   }
   private buttonCloseClickInits():void {
-    const closeElements: HTMLCollection = document.getElementsByClassName('Close');
-    for (let i:number = 0; i < closeElements.length; i++) {
-      closeElements[i].addEventListener ('click', function () {
+    for (let element of this.closeElements) {
+      element.addEventListener ('click', function () {
         const divElement = this.parentElement; 
         divElement.style.display = 'none';
       });

@@ -1,1 +1,16 @@
 export const getId = document.getElementById.bind(document);
+export const BUTTON_BACKWARD_ID = 'BackPage';
+export const BUTTON_FORWARD_ID = 'ForwardPage';
+export const BUTTON_NEWPAGE_ID = 'NewPage';
+export const BUTTON_DELETE_TASK_CLASS = 'Close';
+export const BUTTON_DELETE_TASK_ICON = '\u274C';
+export const BUTTON_BACKWARD_ICON = '🔺';
+export const BUTTON_FORWARD_ICON = '🔺';
+export const BUTTON_NEWPAGE_ICON = '\u2795';
+export const BUTTON_ADD_ID = 'AddButton';
+export const BLOCK_NAVIGATION_BUTTONS_CLASS = 'NavigationButtons';
+export const BLOCK_UL_CLASS = 'WorkBlock';
+export const BLOCK_NAVIGATION_CLASS = 'NavigationBlock';
+export const CHECKED_CLASS = 'Checked';
+export const CURRENT_PAGE_ID = 'CurrentPage';
+export const MESSAGE_ERROR_NO_INPUT = 'You must write something before adding.';
