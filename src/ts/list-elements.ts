@@ -15,7 +15,7 @@ export class ListElement extends HtmlCollection {
     const addButton = document.getElementById(CONST.BUTTON_ADD_ID);
     addButton.addEventListener('click', this.add);
   }
-  public add(): void {
+  private add(): void {
     const liElement: HTMLLIElement = document.createElement('li');
     const inputValue: string = (<HTMLInputElement>document.getElementById('Input')).value;
     const text: Text = document.createTextNode(inputValue);
