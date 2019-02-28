@@ -4,7 +4,7 @@
   </a>
 </div>
 
-# Webpack + Typescript + ToDo Web Application
+# ToDo Web Application (TypeScript)
 
 # Getting started
 
